@@ -11,7 +11,7 @@
 
     <name>RHDM Dependencies</name>
     <description>Red Had Decision Manager dependencies / parent POM.</description>
-    <url>https://github.com/juliaaano/rhdm-quickstart</url>
+    <url>https://github.com/juliaaano/rhdm-dependencies</url>
     <licenses>
         <license>
             <name>MIT License</name>
@@ -29,9 +29,9 @@
     </developers>
 
     <scm>
-        <url>https://github.com/juliaaano/rhdm-quickstart</url>
-        <connection>scm:git:git@github.com:juliaaano/rhdm-quickstart.git</connection>
-        <developerConnection>scm:git:git@github.com:juliaaano/rhdm-quickstart.git</developerConnection>
+        <url>https://github.com/juliaaano/rhdm-dependencies</url>
+        <connection>scm:git:git@github.com:juliaaano/rhdm-dependencies.git</connection>
+        <developerConnection>scm:git:git@github.com:juliaaano/rhdm-dependencies.git</developerConnection>
     </scm>
 
     <properties>
@@ -200,12 +200,32 @@
         <profile>
             <id>deploy</id>
             <distributionManagement>
+                <snapshotRepository>
+                    <id>ossrh</id>
+                    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+                </snapshotRepository>
                 <repository>
-                    <id>repository-id</id>
-                    <name>Repository Name</name>
-                    <url>http://repo-host:repo-port/repo-path</url>
+                    <id>ossrh</id>
+                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
                 </repository>
             </distributionManagement>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.6</version>
+                        <executions>
+                            <execution>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
         </profile>
     </profiles>
 
