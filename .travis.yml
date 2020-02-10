@@ -1,0 +1,19 @@
+env:
+  global:
+    - MAVEN_CMD="mvn --batch-mode --show-version"
+
+language: java
+
+jdk:
+  - openjdk8
+
+cache:
+  directories:
+    - "$HOME/.m2"
+
+install:
+  - if [ -n "$TRAVIS_TAG" ]; then $MAVEN_CMD versions:set -DnewVersion=$TRAVIS_TAG; fi
+  - $MAVEN_CMD dependency:go-offline
+
+script:
+  - $MAVEN_CMD test
