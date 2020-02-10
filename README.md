@@ -1,4 +1,5 @@
 # RHDM Dependencies
+[![Build Status](https://travis-ci.com/juliaaano/rhdm-dependencies.svg)](https://travis-ci.com/juliaaano/rhdm-dependencies)
 
 Red Had Decision Manager POM dependencies.
 
