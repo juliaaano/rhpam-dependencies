@@ -9,7 +9,6 @@ Red Had Decision Manager POM dependencies.
     <groupId>com.juliaaano</groupId>
     <artifactId>rhdm-dependencies</artifactId>
     <version>1.0.2</version>
-    <relativePath>../rhdm-dependencies</relativePath>
 </parent>
 ```
 
