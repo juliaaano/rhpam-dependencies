@@ -46,7 +46,7 @@ deploy:
   provider: releases
   token:
     secure: "B75tMtzt9hU3hKXgKQh8a2AgN3JqjBHTAHdaYXeaFOANGhyLruWslWx7eVocJTGCwgbIkzIB4AGZYMoUQHqaOFNcVU8RVGcJ16lQsU+3r2jS+jEqCEJh4OaLj4vs7vEX07ImfeWvVhIfGsFyshcNyebrkaTxlo+Ixp9uAc5iQ7KijYPPC5u7ozjzVaUTqn2CWhRnXWMHM3l8zGF8uct3VJiriqPXaggeqWwt7d60afA49KgDeQc9P/n2l+5wnPm3DrZRiYgQfJ4As2ni82xZpVR79jnEEVkWfkDZ7ALSEyNrdf9H4r8l59XHMRY+8ubyYjNcnnJ5cngONau1RuqFoeMU7YNe+fJBeTn4UhP86OIeHJv29OYUDj2Mc2mzl+X+CHubhvlOI04+mE7YBehaKL35qHTAgu/Q7K5XImrI4z2+nqnqJh+fDe+YYuhmBsUuCRs4XFzZZV+buewi8OLA2jQwXC4roADLmCMDBoQIHKr8GnrUbC3saB+lfhBeV4Kw45Fk2bZgc/lD8QaV8s8qW55Y/woAeFZOM6c8DHl0/sh2+mIz95IylIzZriRaXKcU133pOEkwC9pl4epJiOrb4BIZrMFUoYO5dHXdITNAlzdTJBWO5w6Xmt+RhmBVghaDLu0HPqxEYm20MU1RVKmwSRjDctH7r2eeBVAgqONbd20="
-  cleanup: true
+  skip_cleanup: true
   file_glob: true
   file:
     - target/rhdm-dependencies-*.pom
