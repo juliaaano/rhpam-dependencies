@@ -1,19 +1,30 @@
 env:
   global:
     - MAVEN_CMD="mvn --batch-mode --show-version"
+    - secure: "sJH/1FK7SheH/Yeow64JCN1yZJiOr8/06q+oAHG8MjUjccKf7GHYCggAVH7r3NdierasbSgurVWXBjZIpRGGZpXzfeMzjzRxQNTOgAxrNgT6+x+n8usg7XgWYekfDQBERroiuolQw8yRkpuVEB00fsQxPChUS0daLh8MTafTUwHHeGlbMc3LsJIK/ZTXrrvaqCjcVTBM1DUFZWj8vOhLNdZ+Z6Atevf1mGIHH6kaUpyagPSPUDySNMBapNu3IaBudmhPCNHlGBN7ilTdp1NCvsvmHVm9IRWroEbOUKYf0Yi8AlwsjBzJXGmk/zSEAoasLK8WZsqyflZuFYk/+lgxnv9DLo75GJ1qiKq/tIQnPlV4orKtkpYiiscUNYf1nb1OT9tTtzaL5C0xhg+Vqmj/5F87f7q5JURD0h/RBAhgVQG4gbxWN9byz+yalpPf66UbK+d0g+FxVPlzjB4Nl2A6y77oL1PiPUhEbw06G+0hK2VoifDVS7529L8cnpqa6Bz1SFNUPgrZW5GiBeV4K7WbWRruas/8EQOkwWFxw6P4uOM2pMqv0gZKQ2LWMS9S1kHrxCrY3eiqv0ps7WhDmghRPGiyyEdi8+Ux3EtvnWDmDKRjTlkU5u1DwdXaW5Lpkvmil5AYAXD80A7ULWoyyf2UjEK/e8HqoCrc0roLmtLMRE4="
+    - secure: "gHtL77h8iNEOUwcQhsY+1zGq6cdkgidL4vwpqjvsS4jyAbPvvQe/Y4+Iad4vQiD85EAXATYXgvyOlwZc1EjVNR+Qs1+4zIBJaFONRQj4EdkaWdsKEirg/qdVfB8xwrTBerrKhCO0/VYmLqIVZrPofnjr/vcaDX1Lw7GInMsOLIibeIbwmd06T+epYdI6/DkNwNhYo5pmfFzJJp+RJr4ORxW0D+ELYwQNf3LLeNIXZ+7TNAoO1qpZFANPEpuofSOb8NQHYvSmEx2doVZDtDBatUTQ42bgXrUi8ZLYt+Vwe36XJ9f6gB0OorhoVJ53m/kRMBErmshMa+U0uLPe0iHahC+rNLa+XhKrFF5St6ht1H0zLaEHt0o3jtGyxyd8niGKjCJ8i6t9wMPnw95xIDufRYeQ84pmx+rqQkvhfGB3ZSUNrc8Vncr6EpvvUNFhekpMnyjU1IiZk8OaFcXIp6sgC9WU3vMtxPvNyM2yKfFqqqzCd/ye7s19jq5hUXjGgCTA2NlPJm0rgE5dknjLk2xUOvZQMqPCuYP4zq4zgWQSOjWCFzevIPE+qRZyDJojMrVfny1UiQiMsakbqSJFztWeTrbVjJhmgj4/rUddTXQ9GneGmMg9pXAvSxZ6AxSqw1HhnQKUEP9uNZqlmuvlRnsEKiuc1LVQyiYBI4fyQpWMV4w="
+    - secure: "VfkKNShcs6/SYHMSeurCYLaHwhqSdjALnol+UDrj+XYIONSXm7tXxah0EYEAuIE9ppYan9y9tJdsR3gZG3fXb9w0ANNRyBQZI7NYLM/dOvtxksoZxjBSsI50w43k68b5gZ99hHZ7l7hf/97xDV3AkHNV9el5PDhzzFosYQ7ug8mgQE9ipWL0FPQntMnhBYRqIGRyFHeI2+9Zn6rnb2zRpc47FJ7vWeVqUrCKWOTSjxjsnh1S5x0RsRkDe4+c2rujBKZTo6/Fu9dTNrRMRQwlpFfyB+wH2D1S3wrxMVCY3iImHDPUHW15dbJgDsVQIPUlPpCLzZ1Qxt1X1i4Acqebfz6jkL0qqJ4Bch76iqhOj290dVUlwkgIRe6eJUnDMKSLF4MNRUc/4ENVpLQEy/wW6PGMLty5vWcSPaZ4AP+MFJVZKbor0hf5h6qHiLlxJV1oVe6KA0uUeQ5OZMUKFY5+VvmcAFv1C9eHRNj8gZR6U5UUZjuVWG9OgOc8MTmPXriiO0SntGejgCQvqsfzJ2SmW7PMH1svHM1hfVcysbojCiMVkkNv38fdL6gfQrwwvYyhJ9mscW0/RS2Yur1EEXNtpAXpXaVZLv3QjyEAwWEUIUXYmWoVaBmrmWHgmHLkUA0CdGFJkzLZSjiDPNxVGYpZCBwEPkZlz6PF3pcNeIuvGP8="
 
 language: java
 
 jdk:
   - openjdk8
+  - openjdk11
 
 cache:
   directories:
     - "$HOME/.m2"
 
-install:
+before_install:
+  - openssl aes-256-cbc -K $encrypted_1a5e49804192_key -iv $encrypted_1a5e49804192_iv -in gpg-key-FB208B6E.asc.enc -out gpg-key-FB208B6E.asc -d
+  - gpg --batch --fast-import gpg-key-FB208B6E.asc
   - if [ -n "$TRAVIS_TAG" ]; then $MAVEN_CMD versions:set -DnewVersion=$TRAVIS_TAG; fi
+
+install:
   - $MAVEN_CMD dependency:go-offline
 
 script:
   - $MAVEN_CMD test
+  - if [[ "$TRAVIS_JDK_VERSION" == "openjdk11" ]]; then
+      $MAVEN_CMD clean deploy --activate-profiles deploy --settings settings.xml -DskipTests -Dgpg.passphrase=$GPG_PASSPHRASE;
+    fi
