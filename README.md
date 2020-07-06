@@ -1,13 +1,13 @@
-# RHDM Dependencies
-[![Build Status](https://travis-ci.com/juliaaano/rhdm-dependencies.svg)](https://travis-ci.com/juliaaano/rhdm-dependencies)
+# RHPAM Dependencies
+[![Build Status](https://travis-ci.com/juliaaano/rhpam-dependencies.svg)](https://travis-ci.com/juliaaano/rhpam-dependencies)
 
-Red Had Decision Manager POM dependencies.
+Red Had Process Automation Manager POM dependencies.
 
 ## Use as a parent in pom.xml
 ```xml
 <parent>
     <groupId>com.juliaaano</groupId>
-    <artifactId>rhdm-dependencies</artifactId>
+    <artifactId>rhpam-dependencies</artifactId>
     <version>1.0.2</version>
 </parent>
 ```
@@ -18,7 +18,7 @@ Red Had Decision Manager POM dependencies.
     <dependencies>
         <dependency>
             <groupId>com.juliaaano</groupId>
-            <artifactId>rhdm-dependencies</artifactId>
+            <artifactId>rhpam-dependencies</artifactId>
             <version>1.0.2</version>
             <type>pom</type>
             <scope>import</scope>
