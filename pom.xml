@@ -39,7 +39,7 @@
     <maven.compiler.target>1.8</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <kie.version>7.30.0.Final-redhat-00003</kie.version>
+    <kie.version>7.33.0.Final-redhat-00003</kie.version>
     <slf4j.version>1.7.30</slf4j.version>
     <logback.version>1.2.3</logback.version>
     <junit.version>4.13</junit.version>
@@ -66,7 +66,6 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-      <!-- jbpm required by ruleflow -->
       <dependency>
         <groupId>org.jbpm</groupId>
         <artifactId>jbpm-bpmn2</artifactId>
