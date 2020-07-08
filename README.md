@@ -8,7 +8,7 @@ Red Had Process Automation Manager POM dependencies.
 <parent>
     <groupId>com.juliaaano</groupId>
     <artifactId>rhpam-dependencies</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 </parent>
 ```
 
@@ -19,7 +19,7 @@ Red Had Process Automation Manager POM dependencies.
         <dependency>
             <groupId>com.juliaaano</groupId>
             <artifactId>rhpam-dependencies</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
             <type>pom</type>
             <scope>import</scope>
         </dependency>
