@@ -6,7 +6,7 @@
 
   <groupId>com.juliaaano</groupId>
   <artifactId>rhpam-dependencies</artifactId>
-  <version>1.0.2-SNAPSHOT</version>
+  <version>1.0.2</version>
   <packaging>pom</packaging>
 
   <name>RHPAM Dependencies</name>
