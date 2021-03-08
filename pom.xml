@@ -10,7 +10,7 @@
   <packaging>pom</packaging>
 
   <name>RHPAM Dependencies</name>
-  <description>Red Had Process Automation Manager dependencies / parent POM.</description>
+  <description>Red Hat Process Automation Manager dependencies / parent POM.</description>
   <url>https://github.com/juliaaano/rhpam-dependencies</url>
   <licenses>
     <license>

@@ -1,7 +1,7 @@
 # RHPAM Dependencies
 [![Build Status](https://travis-ci.com/juliaaano/rhpam-dependencies.svg)](https://travis-ci.com/juliaaano/rhpam-dependencies)
 
-Red Had Process Automation Manager POM dependencies.
+Red Hat Process Automation Manager POM dependencies.
 
 ## Use as a parent in pom.xml
 ```xml
