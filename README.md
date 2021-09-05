@@ -1,5 +1,5 @@
 # RHPAM Dependencies
-[![Build Status](https://travis-ci.com/juliaaano/rhpam-dependencies.svg)](https://travis-ci.com/juliaaano/rhpam-dependencies)
+[![ci](https://github.com/juliaaano/rhpam-dependencies/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/juliaaano/rhpam-dependencies/actions/workflows/ci-cd.yml)
 
 Red Hat Process Automation Manager POM dependencies.
 
